@@ -1,0 +1,2 @@
+*.MOV filter=lfs diff=lfs merge=lfs -text
+my_images/hand_gesture.MOV filter=lfs diff=lfs merge=lfs -text
