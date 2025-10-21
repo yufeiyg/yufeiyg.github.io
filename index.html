@@ -18,7 +18,7 @@
             line-height: 1.6;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -27,9 +27,17 @@
             flex-wrap: wrap;
             gap: 20px;
             align-items: center;
+            
         }
         .intro-text {
             flex: 1 1 60%;
+            font-size: 30px;
+        }
+        .intro-text p a{
+            font-size: 20px;
+        }
+        .intro-text p{
+            font-size: 20px;
         }
         .intro-image {
             flex: 1 1 35%;
@@ -47,6 +55,7 @@
             margin: 0 5px;
             text-decoration: none;
             color: #0077cc;
+            font-size: 20px;
         }
         /* Projects Section */
         h2 {
@@ -57,6 +66,11 @@
         }
         .project p {
             margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .project p a{
+            margin-bottom: 10px;
+            font-size: 18px;
         }
         .project video {
             width: 50%;
@@ -66,7 +80,46 @@
         .work {
             flex: 1 1 60%
         }
-        
+
+
+        .work p{
+            font-size: 18px;
+        }
+        .work p a{
+            font-size: 18px;
+        }
+        .publication {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start; /* Align text and image at the top */
+            margin-bottom: 40px;
+        }
+
+        .pub-text {
+            flex: 1 1 65%; /* Text takes 60% of width */
+            min-width: 250px; /* Prevent text from getting too narrow */
+        }
+        .pub-text p{
+            font-size: 18px;
+
+        }
+        .pub-text p a{
+            font-size: 18px;
+
+        }
+
+        .pub-image {
+            flex: 1 1 30%; /* Image takes 35% of width */
+            min-width: 200px;
+        }
+
+        .pub-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
         </style>
   </head>
 
@@ -86,8 +139,8 @@
                         <a href="https://ocj.name/">Prof. Chad Jenkins</a>.
                     </p>
                     <div class="social-links">
-                        <a href="mailto:yufeiyg@seas.upenn.edu">Email</a> /
-                        <a href="https://github.com/yufeiyg">Github</a> /
+                        <a href="mailto:yufeiyg@seas.upenn.edu">Email</a>  
+                        <a href="https://github.com/yufeiyg">Github</a>
                         <a href="https://www.linkedin.com/in/yufeiyang-gao-7934651a2/">LinkedIn</a>
                     </div>
                 </div>
@@ -96,6 +149,31 @@
                     <a href="my_images/Yufeiyang_Gao.jpg">
                         <img src="my_images/Yufeiyang_Gao.jpg" alt="Yufeiyang Gao">
                     </a>
+                </div>
+            </div>
+
+            <div class="publications">
+                <h2>Publication</h2>
+                <div class="publication">
+                    <div class="pub-image">
+                        <div style="width:100%; max-width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:6px;">
+                            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover;">
+                                <source src="my_images/push.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>   
+                    
+                    <div class="pub-text">
+                        <p>
+                            <b>Push Anything: Single- and Multi-Object Pushing From First Sight with Contact-Implicit MPC</b><br>
+                            Hien Bui*, <b><u>Yufeiyang Gao*</u></b>, Haoran Yang*,
+                            Eric Cui, Siddhant Mody, Brian Acosta, Thomas Stephen Felix, Bibit Bianchini, Michael Posa<br>
+                            Submitted to ICRA 2026, under review<br>
+                            [<a href="https://push-anything.github.io/">project page</a>]
+                        </p>
+                    </div>
+
                 </div>
             </div>
 
@@ -116,7 +194,7 @@
                     
                     <div class="project-text" style="flex:1 1 40%;">
                         <p>
-                            <strong>Trajectory optimization with complementarity constraint</strong><br>
+                            <b>Trajectory optimization with complementarity constraint</b><br>
                             In this project tackles the trajectory optimization problem involving a 2-link robotic gripper. The goal was to plan a feasible
                             motion for the gripper to pick up an object and lift it to a specified height. The problem incorporates complementarity
                             constraints to accurately model the contact interactions between the gripper and the object.
@@ -128,7 +206,7 @@
                 <div class="project" style="display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start; margin-bottom:40px;">
                     <div class="project-text" style="flex:1 1 40%;">
                         <p>
-                            <strong>Hand gesture recognition</strong><br>
+                            <b>Hand gesture recognition</b><br>
                             An acoustic device is attached to the wrist, emitting a fixed sound wave. As the hand moves, the received sound wave changes depending on the gesture.
                             We use real-time machine learning to distinguish hand gesture based on the received sound wave.
                         </p>
@@ -155,7 +233,7 @@
                     </div>
                     <div class="project-text" style="flex:1 1 40%;">
                         <p>
-                            <strong>Lane alignment autonomous driving</strong><br>
+                            <b>Lane alignment autonomous driving</b><br>
                             This is a robot car with basic self-driving ability. The car uses a RGB camera to detect the lane and obstacles. It follows
                             the lane even the lane is partially obscured. When an obstacle is present, an animal in our case, the car overrides the autonomous driving system, crosses the lane 
                             with minimum deviation, and returns to the lane when it's safe.
@@ -166,7 +244,7 @@
                 <div class="project" style="display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start; margin-bottom:40px;">
                     <div class="project-text" style="flex:1 1 40%;">
                         <p>
-                            <strong>3 Link biped</strong><br>
+                            <b>3 Link biped</b><br>
                             This video of a walking 3 link biped is simulated with MatLab
                         </p>
                     </div>
